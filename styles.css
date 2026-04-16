@@ -340,8 +340,7 @@ button {
     margin: -2rem -1.5rem 1.5rem -1.5rem;
     padding: 1.5rem 1.5rem 2rem 1.5rem;
     border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 73px; /* Below top nav */
+    position: relative; /* Scrolls away naturally */
     z-index: 40;
 }
 
@@ -496,14 +495,47 @@ button {
 }
 
 .list-headers {
-    display: none; /* Hidden because we use individual labels now */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    background-color: var(--bg-surface-elevated);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 73px; /* Just below top nav */
+    z-index: 30;
+}
+
+.header-name {
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
 }
 
 .header-items {
     display: flex;
     gap: 1.5rem;
     flex-shrink: 0;
-    margin-right: 0; /* Align with controls */
+}
+
+.header-metric-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    width: 110px; /* Align with controls */
+    color: var(--text-secondary);
+}
+
+.header-metric-box .material-symbols-rounded {
+    font-size: 1.25rem;
+}
+
+.short-label {
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .control-column {
@@ -762,7 +794,16 @@ button {
     .eval-screen .screen-header {
         margin: -1.5rem -1rem 1.5rem -1rem;
         padding: 1rem 1rem;
-        top: 65px;
+        position: relative;
+    }
+
+    .list-headers {
+        top: 60px; /* Aligned with small top nav on mobile */
+        padding: 0.75rem 0.5rem;
+    }
+
+    .header-metric-box {
+        width: 72px; /* Matches the 72px width of controls */
     }
     
     .student-item {

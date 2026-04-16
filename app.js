@@ -195,7 +195,6 @@ function renderEvaluation(classId) {
         
         const createControl = (metric, label) => `
             <div class="control-column">
-                <span class="metric-label">${label}</span>
                 <div class="eval-segment-control" data-student="${studentName}" data-metric="${metric}">
                     <button class="segment-btn state-poor" data-val="-1" title="Mejorable">
                         <span class="material-symbols-rounded">trending_down</span>
