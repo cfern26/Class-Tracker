@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ca"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Public_Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#005236",
+                    "secondary-fixed-dim": "#4edea3",
+                    "surface-tint": "#124af0",
+                    "background": "#f8f9ff",
+                    "on-secondary-fixed": "#002113",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#efefff",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#b8c3ff",
+                    "surface-container-highest": "#d3e4fe",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#dde1ff",
+                    "surface-dim": "#cbdbf5",
+                    "on-secondary-container": "#00714d",
+                    "surface-container-high": "#dce9ff",
+                    "surface-bright": "#f8f9ff",
+                    "on-tertiary-fixed": "#2a1700",
+                    "surface-container-low": "#eff4ff",
+                    "tertiary-container": "#996100",
+                    "inverse-surface": "#213145",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#6cf8bb",
+                    "on-surface-variant": "#434656",
+                    "on-primary-fixed": "#001356",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "error-container": "#ffdad6",
+                    "outline": "#747688",
+                    "inverse-on-surface": "#eaf1ff",
+                    "secondary-fixed": "#6ffbbe",
+                    "on-background": "#0b1c30",
+                    "surface": "#f8f9ff",
+                    "outline-variant": "#c4c5d9",
+                    "primary": "#0040e0",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#2e5bff",
+                    "tertiary": "#784b00",
+                    "inverse-primary": "#b8c3ff",
+                    "on-surface": "#0b1c30",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "tertiary-fixed": "#ffddb8",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#ffeedd",
+                    "on-primary-fixed-variant": "#0035be",
+                    "surface-variant": "#d3e4fe",
+                    "surface-container": "#e5eeff",
+                    "secondary": "#006c49"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Public Sans"],
+                    "label": ["Public Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-[#f8f9ff]/80 backdrop-blur-xl text-[#0040e0] font-['Manrope'] font-bold tracking-tight shadow-[0_0_40px_rgba(11,28,48,0.06)] fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer" data-icon="menu">menu</span>
+<h1 class="text-xl font-extrabold text-[#0040e0]">Academic Architect</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-on-surface-variant font-medium text-sm hidden md:block">Període d'avaluació: Q1</span>
+<img alt="Teacher profile photo" class="w-10 h-10 rounded-full border-2 border-primary-container object-cover" data-alt="Professional portrait of a male teacher in a bright modern office setting, soft natural lighting, educational background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbo5zPtMBjH2ntZdOUvAF15C4w64TgqfjLPQoS0cbTnYkq_aSBqINsLFw1PWr3xcOyutofW_AcAcAa5qi5MP3v4ZHBRQtQIkRQj6mlA1RF4EEs8k0yHW8GqgMKYjjmooleaoALr-YbKfGLos9DH0y6NZ9Mk0_bGgfXo4FysQmiwjSss7M6KHVHq82eVjp1jnwj9XXTuNTHahJnBeqPmnWm8aswEkj-fe5TdLWTonT9oVTnv_a_E5aJFrmoamzDA6rm-p-xX33iZTo"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Student Header Section -->
+<section class="mb-12 flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
+<div class="flex items-center gap-6">
+<div class="relative">
+<img alt="Student avatar" class="w-24 h-24 rounded-xl object-cover shadow-lg" data-alt="Close-up portrait of a young male student smiling warmly, outdoor campus lighting with bokeh trees in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8aCGJIVuqizdDUpOcD0WAt-KqDiBLyTQgr_GwIvMPigBiRSILpb8HYq4jhcFsbLc5zHeTdrugQXGc7QjLJOgEgj9soIzgzax04429kdhrzi0PNDkW6IYgnS_XxSo4jYqxWpS3sRZHKUdbsYQi2OmAwj1kZ9PfmnoV6AjEax-iAnUW-fGE6Q1L96lDXoKwO96H4UQCu2GyxfSWPCwNb5AdFTiw7AlJuVmpLekDEhbMfDe2lmTGOoVxjnZub7zUXb4-bBFWkQEQsNs"/>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 bg-secondary rounded-full border-[3px] border-surface"></div>
+</div>
+<div>
+<span class="font-label text-[11px] uppercase tracking-wider font-bold text-primary">Classe 4B • ID Estudiant: #8821</span>
+<h2 class="text-4xl font-headline font-extrabold text-on-surface mt-1">Marc Soler i Bosch</h2>
+<p class="text-on-surface-variant mt-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="event_note">event_note</span>
+                    Última avaluació: Avui a les 09:15
+                </p>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="bg-secondary-container text-on-secondary-container px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="download">download</span>
+                Exportar PDF
+            </button>
+<button class="bg-primary text-on-primary px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 hover:shadow-lg transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+                Registrar Incident
+            </button>
+</div>
+</section>
+<!-- Bento Grid Layout for Insights -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+<!-- LOMLOE Competence Radar Card -->
+<div class="md:col-span-4 bg-surface-container-low p-8 rounded-3xl h-full flex flex-col justify-between">
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-tertiary">Estàndards Acadèmics</span>
+<h3 class="text-2xl font-headline font-bold mt-2">Alineació LOMLOE</h3>
+<p class="text-on-surface-variant text-sm mt-2 leading-relaxed">Avaluació de les competències clau segons el marc regional actual.</p>
+</div>
+<div class="space-y-6 mt-8">
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold uppercase tracking-tight">
+<span>Comunicació Lingüística (Anglès)</span>
+<span class="text-primary">Avançat (C1)</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold uppercase tracking-tight">
+<span>Competència Digital</span>
+<span class="text-secondary">Excepcional</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[92%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold uppercase tracking-tight">
+<span>Social i Cívica</span>
+<span class="text-tertiary">En desenvolupament</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-[64%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-8 p-4 bg-surface-container-highest/50 rounded-2xl border border-outline-variant/15">
+<p class="text-xs font-medium text-on-surface-variant italic">"En Marc mostra un fort lideratge en projectes digitals grupals, però ha de millorar el diàleg inclusiu durant els debats."</p>
+</div>
+</div>
+<!-- Detailed Progress Charts -->
+<div class="md:col-span-8 grid grid-cols-1 gap-6">
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-[0_40px_80px_rgba(11,28,48,0.04)]">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h3 class="text-2xl font-headline font-bold">Evolució de Mètriques</h3>
+<p class="text-on-surface-variant text-sm">Rendiment històric en les tres àrees clau d'aquest trimestre.</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-low rounded-lg text-xs font-bold text-on-surface-variant">Últims 90 dies</span>
+</div>
+</div>
+<div class="space-y-12">
+<!-- Oral Proficiency Chart -->
+<div class="relative">
+<div class="flex justify-between items-center mb-2">
+<label class="text-xs font-bold text-on-surface uppercase tracking-wider flex items-center gap-2">
+<span class="w-3 h-3 bg-primary rounded-full"></span> Oral Proficiency
+                            </label>
+<span class="text-lg font-headline font-bold text-primary">8.4</span>
+</div>
+<div class="h-24 w-full flex items-end gap-1 px-1">
+<div class="flex-1 bg-primary/10 rounded-t-lg h-[40%]"></div>
+<div class="flex-1 bg-primary/10 rounded-t-lg h-[45%]"></div>
+<div class="flex-1 bg-primary/10 rounded-t-lg h-[42%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[60%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[55%]"></div>
+<div class="flex-1 bg-primary/40 rounded-t-lg h-[75%]"></div>
+<div class="flex-1 bg-primary/40 rounded-t-lg h-[70%]"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[84%]"></div>
+</div>
+</div>
+<!-- Engagement Chart -->
+<div class="relative">
+<div class="flex justify-between items-center mb-2">
+<label class="text-xs font-bold text-on-surface uppercase tracking-wider flex items-center gap-2">
+<span class="w-3 h-3 bg-secondary rounded-full"></span> Active Engagement
+                            </label>
+<span class="text-lg font-headline font-bold text-secondary">9.1</span>
+</div>
+<div class="h-24 w-full flex items-end gap-1 px-1">
+<div class="flex-1 bg-secondary/10 rounded-t-lg h-[60%]"></div>
+<div class="flex-1 bg-secondary/10 rounded-t-lg h-[65%]"></div>
+<div class="flex-1 bg-secondary/20 rounded-t-lg h-[70%]"></div>
+<div class="flex-1 bg-secondary/20 rounded-t-lg h-[75%]"></div>
+<div class="flex-1 bg-secondary/40 rounded-t-lg h-[80%]"></div>
+<div class="flex-1 bg-secondary/40 rounded-t-lg h-[85%]"></div>
+<div class="flex-1 bg-secondary/60 rounded-t-lg h-[88%]"></div>
+<div class="flex-1 bg-secondary rounded-t-lg h-[91%]"></div>
+</div>
+</div>
+<!-- Social Skills Chart -->
+<div class="relative">
+<div class="flex justify-between items-center mb-2">
+<label class="text-xs font-bold text-on-surface uppercase tracking-wider flex items-center gap-2">
+<span class="w-3 h-3 bg-tertiary rounded-full"></span> Social Intelligence
+                            </label>
+<span class="text-lg font-headline font-bold text-tertiary">6.2</span>
+</div>
+<div class="h-24 w-full flex items-end gap-1 px-1">
+<div class="flex-1 bg-tertiary/10 rounded-t-lg h-[80%]"></div>
+<div class="flex-1 bg-tertiary/10 rounded-t-lg h-[75%]"></div>
+<div class="flex-1 bg-tertiary/20 rounded-t-lg h-[70%]"></div>
+<div class="flex-1 bg-tertiary/40 rounded-t-lg h-[50%]"></div>
+<div class="flex-1 bg-tertiary/40 rounded-t-lg h-[55%]"></div>
+<div class="flex-1 bg-tertiary/60 rounded-t-lg h-[58%]"></div>
+<div class="flex-1 bg-tertiary/80 rounded-t-lg h-[60%]"></div>
+<div class="flex-1 bg-tertiary rounded-t-lg h-[62%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Logs Section -->
+<section class="mt-12">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="text-2xl font-headline font-bold">Diari d'Activitat</h3>
+<p class="text-on-surface-variant text-sm">Intervencions crítiques i èxits destacables.</p>
+</div>
+<button class="text-primary font-bold text-sm uppercase tracking-widest hover:underline">Veure tots els registres</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Red Incident Card -->
+<div class="bg-white p-6 rounded-3xl border-l-8 border-error shadow-sm flex gap-4">
+<div class="bg-error-container w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-on-surface">Conflicte en debat grupal</h4>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase">12 Oct • 10:30 AM</span>
+</div>
+<p class="text-sm text-on-surface-variant mt-2 leading-relaxed">En Marc ha interromput els seus companys diverses vegades i ha utilitzat un llenguatge corporal despectiu durant la presentació.</p>
+<div class="mt-4 flex gap-2">
+<span class="px-2 py-1 bg-error-container/30 text-error text-[10px] font-bold rounded uppercase">Dinàmiques Socials</span>
+<span class="px-2 py-1 bg-error-container/30 text-error text-[10px] font-bold rounded uppercase">Cal Intervenció</span>
+</div>
+</div>
+</div>
+<!-- Green Highlight Card -->
+<div class="bg-white p-6 rounded-3xl border-l-8 border-secondary shadow-sm flex gap-4">
+<div class="bg-secondary-container w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="star">star</span>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-on-surface">Excel·lència en Portfoli Digital</h4>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase">08 Oct • 02:45 PM</span>
+</div>
+<p class="text-sm text-on-surface-variant mt-2 leading-relaxed">Ús excepcional de mitjans interactius per explicar les lleis termodinàmiques. Ha superat tots els requisits tècnics de la unitat.</p>
+<div class="mt-4 flex gap-2">
+<span class="px-2 py-1 bg-secondary-container/30 text-secondary text-[10px] font-bold rounded uppercase">Comp. Digital</span>
+<span class="px-2 py-1 bg-secondary-container/30 text-secondary text-[10px] font-bold rounded uppercase">Mestratge</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-2 pb-6 bg-[#f8f9ff]/80 backdrop-blur-xl shadow-[0_-8px_30px_rgba(0,0,0,0.04)] z-50 rounded-t-3xl">
+<div class="flex flex-col items-center justify-center text-slate-400">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Public_Sans'] text-[11px] uppercase tracking-wider font-bold mt-1">Grups</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400">
+<span class="material-symbols-outlined" data-icon="how_to_reg">how_to_reg</span>
+<span class="font-['Public_Sans'] text-[11px] uppercase tracking-wider font-bold mt-1">Avaluar</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#0040e0] bg-[#2e5bff]/10 rounded-xl px-4 py-1">
+<span class="material-symbols-outlined" data-icon="show_chart" style="font-variation-settings: 'FILL' 1;">show_chart</span>
+<span class="font-['Public_Sans'] text-[11px] uppercase tracking-wider font-bold mt-1">Progrés</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400">
+<span class="material-symbols-outlined" data-icon="person_search">person_search</span>
+<span class="font-['Public_Sans'] text-[11px] uppercase tracking-wider font-bold mt-1">Ajustos</span>
+</div>
+</nav>
+</body></html>

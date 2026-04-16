@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ca"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Avaluació de Classe | Academic Architect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Public+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#005236",
+                    "secondary-fixed-dim": "#4edea3",
+                    "surface-tint": "#124af0",
+                    "background": "#f8f9ff",
+                    "on-secondary-fixed": "#002113",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#efefff",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#b8c3ff",
+                    "surface-container-highest": "#d3e4fe",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#dde1ff",
+                    "surface-dim": "#cbdbf5",
+                    "on-secondary-container": "#00714d",
+                    "surface-container-high": "#dce9ff",
+                    "surface-bright": "#f8f9ff",
+                    "on-tertiary-fixed": "#2a1700",
+                    "surface-container-low": "#eff4ff",
+                    "tertiary-container": "#996100",
+                    "inverse-surface": "#213145",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#6cf8bb",
+                    "on-surface-variant": "#434656",
+                    "on-primary-fixed": "#001356",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "error-container": "#ffdad6",
+                    "outline": "#747688",
+                    "inverse-on-surface": "#eaf1ff",
+                    "secondary-fixed": "#6ffbbe",
+                    "on-background": "#0b1c30",
+                    "surface": "#f8f9ff",
+                    "outline-variant": "#c4c5d9",
+                    "primary": "#0040e0",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#2e5bff",
+                    "tertiary": "#784b00",
+                    "inverse-primary": "#b8c3ff",
+                    "on-surface": "#0b1c30",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "tertiary-fixed": "#ffddb8",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#ffeedd",
+                    "on-primary-fixed-variant": "#0035be",
+                    "surface-variant": "#d3e4fe",
+                    "surface-container": "#e5eeff",
+                    "secondary": "#006c49"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Public Sans"],
+                    "label": ["Public Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .student-card {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .student-card:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<header class="bg-[#f8f9ff]/80 backdrop-blur-xl text-[#0040e0] font-['Manrope'] font-bold tracking-tight docked full-width top-0 sticky shadow-[0_0_40px_rgba(11,28,48,0.06)] flex justify-between items-center px-6 py-4 w-full z-40 transition-all duration-300 ease-in-out">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:bg-slate-100/50 p-2 rounded-full transition-all">menu</span>
+<h1 class="text-xl font-extrabold text-[#0040e0]">Academic Architect</h1>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-primary text-on-primary px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-primary-container transition-colors shadow-sm">
+            Finalitzar Sessió
+        </button>
+<img alt="Teacher profile photo" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwO3IGMTieJP1pX2_Xx0A58kMn5LDPCj1rNvpb0NpbdcN4u6I6CZ2mIMXufdZ5JqBxfP_3kFsPv98MbHjQYGSbCskoAhMI50g1cfoEOXZ8wc_mgtxcJCsMl_slX4ctTXhh-JH-KKnJ3STZNOVzxFURib8IdIBfIPlP2DoJ0dvyLNSCgtkL598QNLY6UjHXJlgkrEOmAGpAHJ1neGfdrU0HbWU7xxOKkzT9NVO3YUc7nNfieCeGeSEe86RgfMpOZgpPbOgFIPqlppY"/>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 pt-8 pb-32">
+<!-- Dashboard Header -->
+<div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-[11px] uppercase tracking-[0.2em] text-primary font-bold mb-2 block">English Class • 3r B</span>
+<h2 class="text-4xl font-headline font-extrabold text-on-surface tracking-tight">Avaluació de Classe</h2>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-low p-2 rounded-xl">
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container-lowest rounded-lg shadow-sm border border-secondary/10">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-sm font-bold text-on-surface">Sessió Activa</span>
+</div>
+<div class="flex gap-1">
+<button class="p-2 hover:bg-surface-container-high rounded-lg transition-colors text-outline">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Student Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Student Card: Marc V. -->
+<div class="student-card group bg-surface-container-lowest rounded-full p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-xl border border-surface-container-high">
+<div class="flex items-center gap-4 mb-6">
+<div class="relative">
+<img alt="Marc V." class="w-16 h-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGOO3qKiDHBi_pZ6GYZbXzA37Urx6bZ7JYopDFhBfspSIEtB4sNt3tADy6An0hux7sI8zrxEaX4Stm0zVOgxlNEgZdJkXuu1PLX3F538ef3wLT3UfIqGeszAIC7yAmaLjRktFpzUm7jfMQUvwRPmvCcu7vKyUtcEAE4CWWvSEEPvE0vq-Kv6P_klLu9gmTGWjwqfOeoQ5PrD77HBDuU0GqTPjGOhA19m_qUiTbB9XRZuqq4JlwDNGazutMB1OZ4hURZfA-QCfwlBU"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight">Marc V.</h3>
+<p class="text-[10px] font-bold text-outline uppercase tracking-wider">Grup A</p>
+</div>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container-low">
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined filled-icon">forum</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-secondary">Oral</span>
+</button>
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined filled-icon">task_alt</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-tertiary">Gestió</span>
+</button>
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-outline">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-outline">Social</span>
+</button>
+</div>
+</div>
+<!-- Student Card: Júlia R. -->
+<div class="student-card group bg-surface-container-lowest rounded-full p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-xl border border-surface-container-high">
+<div class="flex items-center gap-4 mb-6">
+<div class="relative">
+<img alt="Júlia R." class="w-16 h-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFtPrEqJXPr_dEP3JJWqZ_1dVpheqVl36K9u34xwrlQ3kquWiodIo8VDWws9ldfoDuy-P0-qRn9_iWJDTpqOlzfMBIld9Qlw7Ae6dkd8RnpSe2RYrQbiAbVzc08J-SWtG3bGyctNUdS2PtCcp7I_F1kfCk3gTJYQDRapbWR2zzSIKV-2Z3gx7Pzn5no110evOGCNtmpHWDS0vg3et8oKY5xrJd2X6x_mkZrXMGQJw2rlJorKhSyslgdIqateTlaOfaNiAq3McWXO4"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight">Júlia R.</h3>
+<p class="text-[10px] font-bold text-outline uppercase tracking-wider">Grup B</p>
+</div>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container-low">
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined filled-icon">forum</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-secondary">Oral</span>
+</button>
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined filled-icon">task_alt</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-secondary">Gestió</span>
+</button>
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined filled-icon">groups</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-secondary">Social</span>
+</button>
+</div>
+</div>
+<!-- Student Card: Pol S. -->
+<div class="student-card group bg-surface-container-lowest rounded-full p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-xl border border-surface-container-high">
+<div class="flex items-center gap-4 mb-6">
+<div class="relative">
+<img alt="Pol S." class="w-16 h-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApMN1NDKKxkjJXcGth8uRj_-Se30K_l9V3wHjcl9-bKpXzsidnvXL19D1X-AHg0la7Fe9If8wIo4fTkG614pCerBbaEsiNjM82o5ldQGnEC0X1hDFyggAKhfejDETAqApOzy3gJlFN6kTMiEe0vW5XlT7SnPDV51xAhik6Ay5AnRQLUDYvya-c2SCP9OI9FPCAOo7XkDXUl-RAeYHdAAX5-jnwI-cQVy6I4Tk8RBhRFtOvuALQRMS5OhhJGnecwbjevZ4SuRqLMUY"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight">Pol S.</h3>
+<p class="text-[10px] font-bold text-outline uppercase tracking-wider">Grup A</p>
+</div>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container-low">
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-outline">
+<span class="material-symbols-outlined">forum</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-outline">Oral</span>
+</button>
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined filled-icon">task_alt</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-error">Gestió</span>
+</button>
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined filled-icon">groups</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-tertiary">Social</span>
+</button>
+</div>
+</div>
+<!-- Student Card: Laia M. -->
+<div class="student-card group bg-surface-container-lowest rounded-full p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-xl border border-surface-container-high">
+<div class="flex items-center gap-4 mb-6">
+<div class="relative">
+<img alt="Laia M." class="w-16 h-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV8vRkkEWIFyfISh55qn-MAAfS7ilddSU5eIRl2elCcgVBbtvWJzUgnrGmc3BjhNHz7Yn5GxlN85tqEJOA67Rte4GufxN97mmFwXG09VuaYEFkA1qnoIq_2ZD-I_VY3nA8HxAQbPW-XuhDX81z2SuaJx-F_TYhnVCXBC8Pue1Im_60dnFpKLyHn3nP5Jg10q3EzC9AKaCVjWtcUkFSmUt1OStuOE1Q82SCl3qfbe4xjOLSixjPpON5FkXyyqvrTRmaIazGwD8ucjM"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight">Laia M.</h3>
+<p class="text-[10px] font-bold text-outline uppercase tracking-wider">Grup C</p>
+</div>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container-low">
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-outline">
+<span class="material-symbols-outlined">forum</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-outline">Oral</span>
+</button>
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-outline">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-outline">Gestió</span>
+</button>
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-outline">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-outline">Social</span>
+</button>
+</div>
+</div>
+<!-- Student Card: Èric B. -->
+<div class="student-card group bg-surface-container-lowest rounded-full p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-xl border border-surface-container-high">
+<div class="flex items-center gap-4 mb-6">
+<div class="relative">
+<img alt="Èric B." class="w-16 h-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMoXF5U00VTpyyxodNZmh61wmgVamV5aiDaJllX9K8FFCJ7Bn6OwiyCHC2wK8iC0rMWesFzGhX1wPqVOYZRodF-7yi6GOJshoX2NlAceBhGE18G-oeoZoXHvutaOW67002PBJ4xWX93iA0zozmcUepBiGGgi8zjqhekKDmko4xc6WLSZ1GzY_1qCAVTnUHQVPvCli95hfJtRh3RofrFDr9tpEquANyqhETPizb6j5BGnNgoOX_PtvVwYkXPIcPKzZxxuXDN07keBQ"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight">Èric B.</h3>
+<p class="text-[10px] font-bold text-outline uppercase tracking-wider">Grup B</p>
+</div>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container-low">
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined filled-icon">forum</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-secondary">Oral</span>
+</button>
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined filled-icon">task_alt</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-secondary">Gestió</span>
+</button>
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined filled-icon">groups</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-secondary">Social</span>
+</button>
+</div>
+</div>
+<!-- Student Card: Maria G. -->
+<div class="student-card group bg-surface-container-lowest rounded-full p-6 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-xl border border-surface-container-high">
+<div class="flex items-center gap-4 mb-6">
+<div class="relative">
+<img alt="Maria G." class="w-16 h-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB-gKyvFYQVO2bxFxKWyV3FIDcWU2Ya5FZociznq39HHcdO68Y_kvKGviI8nPVFNWlfa6lA79roW4yy65KSOVjid7o9z7Da68dOQMD2GAvJNfqU9tLx_CbP1CkhUSkCOQTLEbR-VgPz4L1Ty_g1yqX100hoGfFdIdyE7BAtmcgt6qfVF7dYnxSCmFoSj2jAWlLmHFZbQ7n4nm6xPNK00Rpz7CI04iLmPXnDhAhkMXEY9wqxZoPWLponrgMyj5FEnLhsRqWdZkeQa4"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight">Maria G.</h3>
+<p class="text-[10px] font-bold text-outline uppercase tracking-wider">Grup C</p>
+</div>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-surface-container-low">
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined filled-icon">forum</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-error">Oral</span>
+</button>
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-outline">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-outline">Gestió</span>
+</button>
+<button class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-outline">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<span class="text-[9px] font-bold uppercase tracking-tighter text-outline">Social</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB for Walking Use -->
+<div class="fixed right-6 bottom-24 z-50">
+<button class="w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center transition-transform active:scale-95 group">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-2 pb-6 bg-[#f8f9ff]/80 backdrop-blur-xl z-50 rounded-t-3xl shadow-[0_-8px_30px_rgba(0,0,0,0.04)]">
+<div class="flex flex-col items-center justify-center text-slate-400 font-['Public_Sans'] text-[11px] uppercase tracking-wider font-bold hover:text-[#0040e0] transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-1">grid_view</span>
+        Grups
+    </div>
+<div class="flex flex-col items-center justify-center text-[#0040e0] bg-[#2e5bff]/10 rounded-xl px-4 py-1 font-['Public_Sans'] text-[11px] uppercase tracking-wider font-bold transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">how_to_reg</span>
+        Avaluació
+    </div>
+<div class="flex flex-col items-center justify-center text-slate-400 font-['Public_Sans'] text-[11px] uppercase tracking-wider font-bold hover:text-[#0040e0] transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-1">show_chart</span>
+        Progrés
+    </div>
+</nav>
+<!-- Legend -->
+<div class="fixed left-6 bottom-24 bg-surface-container-low/90 backdrop-blur px-4 py-3 rounded-2xl shadow-lg border border-outline-variant/10 hidden md:block">
+<p class="text-[10px] font-extrabold uppercase tracking-widest text-outline mb-2">Llegenda del Semàfor</p>
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="text-xs font-medium text-on-surface">Superat</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span class="text-xs font-medium text-on-surface">Millorable</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="text-xs font-medium text-on-surface">Incidència</span>
+</div>
+</div>
+</div>
+</body></html>

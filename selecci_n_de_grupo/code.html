@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Architect - Group Selection</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Public_Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#005236",
+                    "secondary-fixed-dim": "#4edea3",
+                    "surface-tint": "#124af0",
+                    "background": "#f8f9ff",
+                    "on-secondary-fixed": "#002113",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#efefff",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#b8c3ff",
+                    "surface-container-highest": "#d3e4fe",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#dde1ff",
+                    "surface-dim": "#cbdbf5",
+                    "on-secondary-container": "#00714d",
+                    "surface-container-high": "#dce9ff",
+                    "surface-bright": "#f8f9ff",
+                    "on-tertiary-fixed": "#2a1700",
+                    "surface-container-low": "#eff4ff",
+                    "tertiary-container": "#996100",
+                    "inverse-surface": "#213145",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#6cf8bb",
+                    "on-surface-variant": "#434656",
+                    "on-primary-fixed": "#001356",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "error-container": "#ffdad6",
+                    "outline": "#747688",
+                    "inverse-on-surface": "#eaf1ff",
+                    "secondary-fixed": "#6ffbbe",
+                    "on-background": "#0b1c30",
+                    "surface": "#f8f9ff",
+                    "outline-variant": "#c4c5d9",
+                    "primary": "#0040e0",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#2e5bff",
+                    "tertiary": "#784b00",
+                    "inverse-primary": "#b8c3ff",
+                    "on-surface": "#0b1c30",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "tertiary-fixed": "#ffddb8",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#ffeedd",
+                    "on-primary-fixed-variant": "#0035be",
+                    "surface-variant": "#d3e4fe",
+                    "surface-container": "#e5eeff",
+                    "secondary": "#006c49"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Public Sans"],
+                    "label": ["Public Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-[#f8f9ff]/80 backdrop-blur-xl shadow-[0_0_40px_rgba(11,28,48,0.06)] font-['Manrope'] font-bold tracking-tight fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 transition-all duration-300 ease-in-out">
+<div class="flex items-center gap-4">
+<button class="text-slate-500 hover:bg-slate-100/50 p-2 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-xl font-extrabold text-[#0040e0]">Academic Architect</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex gap-6 mr-6">
+<a class="text-[#0040e0] font-bold" href="#">Classes</a>
+<a class="text-slate-500 hover:text-[#0040e0]" href="#">Estadístiques</a>
+<a class="text-slate-500 hover:text-[#0040e0]" href="#">Horari</a>
+</div>
+<img alt="Teacher profile photo" class="w-10 h-10 rounded-full border-2 border-surface-container-high object-cover" data-alt="Portrait of a professional teacher in a brightly lit modern office setting, smiling warmly at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE1UTFiQ0wksGyM1G3368RtY_xdMc-9mCZE5P_oV7kkMW2NOZV5AIg0rTanHRk3zjsNYzekcbuI0tDuQy1kuvdsruG7y79ZswJuy_3brCNuiHMmoJa6eZeqh03XpGDLRsYN17taEXl75IpxvBbHl84wZpuju3610c19qZbaj4maRVa4WXqGBz-3_l7vLcJ3d9Lct7hIcTt9n8VsPwWnzFro5j-StvuFmptBUPsSWXOhMsYHMIM6jLYqxe6BqiZzR49ZNCEtlljy-0"/>
+</div>
+</header>
+<main class="pt-24 pb-28 px-6 max-w-6xl mx-auto">
+<!-- Editorial Header Section -->
+<section class="mb-12">
+<span class="font-label text-[11px] uppercase tracking-wider font-bold text-primary mb-2 block">Panell de Control</span>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<h2 class="font-headline text-4xl font-extrabold text-on-surface tracking-tight max-w-md">Selecciona un <span class="text-primary-container">grup</span> per començar.</h2>
+<div class="flex gap-3">
+<div class="bg-surface-container-low px-4 py-3 rounded-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="calendar_today">calendar_today</span>
+<span class="font-label text-sm font-semibold">Dijous, 24 oct.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Layout for Group Selection -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Group Card: 1º A -->
+<button class="group text-left relative overflow-hidden bg-surface-container-lowest rounded-xl shadow-[0_0_40px_rgba(11,28,48,0.04)] p-6 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl ring-1 ring-outline-variant/10">
+<div class="flex justify-between items-start mb-8">
+<div class="w-14 h-14 bg-primary-container text-on-primary-container rounded-xl flex items-center justify-center font-headline text-2xl font-black">1º A</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-1">Llengua Anglesa</h3>
+<p class="font-body text-on-surface-variant text-sm mb-4">Educació Primària</p>
+<div class="flex items-center gap-4 text-sm font-medium">
+<div class="flex items-center gap-1 text-on-surface"><span class="material-symbols-outlined text-sm" data-icon="group">group</span> 28 Alumnes</div>
+<div class="flex items-center gap-1 text-secondary"><span class="material-symbols-outlined text-sm fill-icon" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> Actiu</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+</button>
+<!-- Group Card: 2º B -->
+<button class="group text-left relative overflow-hidden bg-surface-container-lowest rounded-xl shadow-[0_0_40px_rgba(11,28,48,0.04)] p-6 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl ring-1 ring-outline-variant/10">
+<div class="flex justify-between items-start mb-8">
+<div class="w-14 h-14 bg-secondary-container text-on-secondary-container rounded-xl flex items-center justify-center font-headline text-2xl font-black">2º B</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-1">Literatura Avançada</h3>
+<p class="font-body text-on-surface-variant text-sm mb-4">Cicle Superior</p>
+<div class="flex items-center gap-4 text-sm font-medium">
+<div class="flex items-center gap-1 text-on-surface"><span class="material-symbols-outlined text-sm" data-icon="group">group</span> 24 Alumnes</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                            14:30 PM
+                        </div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+</button>
+<!-- Group Card: 3º ESO -->
+<button class="group text-left relative overflow-hidden bg-surface-container-lowest rounded-xl shadow-[0_0_40px_rgba(11,28,48,0.04)] p-6 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl ring-1 ring-outline-variant/10">
+<div class="flex justify-between items-start mb-8">
+<div class="w-14 h-14 bg-tertiary-container text-on-tertiary-container rounded-xl flex items-center justify-center font-headline text-2xl font-black">3º E</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-1">Gramàtica Anglesa</h3>
+<p class="font-body text-on-surface-variant text-sm mb-4">Cicle Mitjà</p>
+<div class="flex items-center gap-4 text-sm font-medium">
+<div class="flex items-center gap-1 text-on-surface"><span class="material-symbols-outlined text-sm" data-icon="group">group</span> 31 Alumnes</div>
+<div class="flex items-center gap-1 text-error"><span class="material-symbols-outlined text-sm" data-icon="warning">warning</span> Ev. pendent</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-tertiary scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+</button>
+<!-- Quick Action Card -->
+<button class="group col-span-1 md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center bg-surface-container-low border-2 border-dashed border-outline-variant/30 rounded-xl p-8 transition-all hover:bg-surface-container-high hover:border-primary/50">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4 text-primary shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</div>
+<span class="font-headline font-bold text-on-surface">Crear nou grup</span>
+<p class="text-xs text-on-surface-variant mt-1">Afegir classe o llista d'alumnes</p>
+</button>
+</div>
+<!-- Recent Activity Section -->
+<section class="mt-16 bg-surface-container-low/50 rounded-2xl p-8">
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-6">Avaluacions recents</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="description">description</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Qüestionari de gramàtica</p>
+<p class="text-xs text-on-surface-variant">Classe 1r A • Ahir</p>
+</div>
+</div>
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Completat</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-tertiary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="edit_square">edit_square</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Qüestionari de gramàtica</p>
+<p class="text-xs text-on-surface-variant">Classe 1r A • Ahir</p>
+</div>
+</div>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Sincronitzant...</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#f8f9ff]/80 backdrop-blur-xl flex justify-around items-center px-4 pt-2 pb-6 z-50 rounded-t-3xl shadow-[0_-8px_30px_rgba(0,0,0,0.04)]">
+<button class="flex flex-col items-center justify-center text-[#0040e0] bg-[#2e5bff]/10 rounded-xl px-4 py-1 transition-all active:scale-90 tap-highlight-none">
+<span class="material-symbols-outlined fill-icon" data-icon="grid_view" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-['Public_Sans'] text-[11px] uppercase tracking-wider font-bold mt-1">Grups</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-[#0040e0] transition-all active:scale-90 tap-highlight-none">
+<span class="material-symbols-outlined" data-icon="how_to_reg">how_to_reg</span>
+<span class="font-['Public_Sans'] text-[11px] uppercase tracking-wider font-bold mt-1">Avaluar</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-[#0040e0] transition-all active:scale-90 tap-highlight-none">
+<span class="material-symbols-outlined" data-icon="show_chart">show_chart</span>
+<span class="font-['Public_Sans'] text-[11px] uppercase tracking-wider font-bold mt-1">Progrés</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-[#0040e0] transition-all active:scale-90 tap-highlight-none">
+<span class="material-symbols-outlined" data-icon="person_search">person_search</span>
+<span class="font-['Public_Sans'] text-[11px] uppercase tracking-wider font-bold mt-1">Configuració</span>
+</button>
+</nav>
+<!-- Floating Action Button - Mobile contextual action -->
+<button class="md:hidden fixed bottom-24 right-6 w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</body></html>

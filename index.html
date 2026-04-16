@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Tracker - English Teacher</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- PWA & iOS Specific -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ClassTracker">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <meta name="theme-color" content="#5A67D8">
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="top-nav">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="material-symbols-rounded">school</span>
+                    <h1>ClassTracker</h1>
+                </div>
+                <div class="nav-actions">
+                    <button id="sync-btn" class="icon-btn" title="Sincronitzar">
+                        <span class="material-symbols-rounded">sync</span>
+                    </button>
+                    <div class="profile-thumb">CT</div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Container -->
+        <main id="main-content">
+            <!-- Screens will be injected here -->
+            <div id="loader" class="loader-container hidden">
+                <div class="spinner"></div>
+                <p>Carregant dades...</p>
+            </div>
+        </main>
+
+        <!-- Templates for Screens -->
+        <template id="screen-home">
+            <div class="screen home-screen">
+                <header class="screen-header">
+                    <h2>Hello, Carlos!</h2>
+                    <p>Selecciona una classe per començar l'avaluació d'avui.</p>
+                </header>
+                
+                <div id="class-grid" class="class-grid">
+                    <!-- Class cards will be generated dynamically -->
+                    <div class="empty-state">
+                        <p>Carregant llistes de classes...</p>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="screen-evaluation">
+            <div class="screen eval-screen">
+                <header class="screen-header">
+                    <div class="header-top">
+                        <button id="back-to-home" class="back-btn">
+                            <span class="material-symbols-rounded">arrow_back</span>
+                        </button>
+                        <h2 id="current-class-title">Classe 4th A</h2>
+                    </div>
+                    <div class="header-meta">
+                        <p id="current-date"></p>
+                        <div class="stats">
+                            <span id="eval-count">0/0</span> evaluats
+                        </div>
+                    </div>
+                </header>
+
+                <div class="evaluation-legend">
+                    <div class="legend-item">
+                        <span class="material-symbols-rounded">record_voice_over</span>
+                        <span><strong>Oral:</strong> Participació i ús de l'anglès</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="material-symbols-rounded">edit_note</span>
+                        <span><strong>Task:</strong> Treball, esforç i concentració</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="material-symbols-rounded">groups</span>
+                        <span><strong>Social:</strong> Comportament i cooperació</span>
+                    </div>
+                </div>
+
+                <div class="evaluation-list-wrapper">
+                    <div class="list-headers">
+                        <span class="header-name">Alumne</span>
+                        <div class="header-items">
+                            <div class="header-metric-box">
+                                <span class="full-label">Oral Interaction</span>
+                            </div>
+                            <div class="header-metric-box">
+                                <span class="full-label">Task Engagement</span>
+                            </div>
+                            <div class="header-metric-box">
+                                <span class="full-label">Social Skills</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="student-list" class="student-list">
+                        <!-- Students injected here -->
+                    </div>
+                </div>
+
+                <footer class="eval-footer">
+                    <button id="save-evaluation" class="primary-btn">
+                        <span class="material-symbols-rounded">save</span>
+                        Guardar Sessió
+                    </button>
+                </footer>
+            </div>
+        </template>
+
+        <template id="screen-student-stats">
+            <div class="screen stats-screen">
+                <header class="screen-header">
+                    <div class="header-top">
+                        <button id="back-to-eval" class="back-btn">
+                            <span class="material-symbols-rounded">arrow_back</span>
+                        </button>
+                        <h2 id="stats-student-name">Nom de l'Alumne</h2>
+                    </div>
+                </header>
+
+                <div class="stats-container">
+                    <div class="overall-card">
+                        <div class="sessions-badge">
+                            <span class="material-symbols-rounded">event_repeat</span>
+                            <span id="total-sessions">0</span> sessions evaluades
+                        </div>
+                    </div>
+
+                    <div class="metrics-grid">
+                        <div class="metric-progress-card">
+                            <div class="metric-header">
+                                <span class="material-symbols-rounded color-oi">record_voice_over</span>
+                                <h3>Oral Interaction</h3>
+                                <span class="avg-value" id="avg-oi">0.0</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div id="bar-oi" class="progress-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="metric-progress-card">
+                            <div class="metric-header">
+                                <span class="material-symbols-rounded color-te">edit_note</span>
+                                <h3>Task Engagement</h3>
+                                <span class="avg-value" id="avg-te">0.0</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div id="bar-te" class="progress-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="metric-progress-card">
+                            <div class="metric-header">
+                                <span class="material-symbols-rounded color-sc">groups</span>
+                                <h3>Social Skills</h3>
+                                <span class="avg-value" id="avg-sc">0.0</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div id="bar-sc" class="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <!-- Modals / Toast Notifications -->
+    <div id="toast" class="toast hidden">
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
