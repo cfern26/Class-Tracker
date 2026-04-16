@@ -761,26 +761,59 @@ button {
     
     .eval-screen .screen-header {
         margin: -1.5rem -1rem 1.5rem -1rem;
-        padding: 1.5rem 1rem;
+        padding: 1rem 1rem;
+        top: 65px;
     }
     
     .student-item {
-        padding: 0.75rem 1rem;
+        padding: 0.75rem 0.5rem;
+        gap: 0.25rem;
     }
     
-    .eval-controls, .header-items {
-        gap: 0.5rem;
+    .eval-controls {
+        gap: 0.25rem;
     }
     
-    .eval-segment-control, .header-metric-box {
-        width: 85px;
+    .eval-segment-control {
+        width: 72px; /* Narrower for mobile */
+        padding: 1px;
     }
 
     .segment-btn {
-        padding: 4px 6px;
+        padding: 4px 2px;
     }
 
     .segment-btn .material-symbols-rounded {
-        font-size: 16px;
+        font-size: 14px;
+    }
+
+    .student-avatar {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+
+    .student-name {
+        font-size: 0.8rem;
+        max-width: 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .metric-label {
+        font-size: 0.55rem;
+    }
+
+    /* Fix Legend for Mobile */
+    .evaluation-legend {
+        padding: 0.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .legend-item {
+        font-size: 0.75rem;
     }
 }
